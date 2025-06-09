@@ -79,4 +79,7 @@ HTTPERROR_ALLOWED_CODES = [403, 404]
 #Create leaksearch.py
 nano darkwebintel/darkwebintel/spiders/leaksearch.py
 
+#Run the Spider via ProxyChains
+cd darkwebintel
+proxychains scrapy crawl leaksearch
 
