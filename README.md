@@ -38,6 +38,12 @@ socks5h  127.0.0.1 9050
 #Test with:
 proxychains curl http://check.torproject.org
 
+#Create Project
+scrapy startproject darkwebintel
+cd darkwebintel
+mkdir logs
+touch leaks.txt onions.txt targets.txt
+
 Project Folder Structure
 darkwebintel/
 ├── darkwebintel/
@@ -53,11 +59,7 @@ darkwebintel/
 ├── targets.txt
 ├── logs/
 └── scrapy.cfg
-#Create Project
-scrapy startproject darkwebintel
-cd darkwebintel
-mkdir logs
-touch leaks.txt onions.txt targets.txt
+
 #Edit darkwebintel/darkwebintel/settings.py
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 1,
